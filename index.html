@@ -6,6 +6,8 @@
     <title>Dra. Cindy Padilla | Odontología Integral en Santa Tecla</title>
     <meta name="description" content="Clínica dental en Jardines de Merliot. Odontología integral, endodoncia, atención a niños y adultos. Agenda tu cita hoy.">
     
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='logoGradient' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23008b99;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%230f3847;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M25 35 C 25 10, 48 15, 50 25 C 52 15, 75 10, 75 35 C 75 65, 65 85, 55 90 M 45 90 C 35 85, 25 65, 25 35' stroke='url(%23logoGradient)' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ctext x='50' y='62' font-family='serif' font-size='42' font-weight='bold' fill='url(%23logoGradient)' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
+
     <script src="https://cdn.tailwindcss.com"></script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,12 +22,12 @@
                 extend: {
                     fontFamily: {
                         sans: ['Work Sans', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'], // Fuente para el nombre
+                        serif: ['Playfair Display', 'serif'],
                     },
                     colors: {
                         brand: {
                             dark: '#0f3847', 
-                            primary: '#008b99', /* Ajustado a un Teal más brillante como el logo */
+                            primary: '#008b99',
                             light: '#e0f2fe',
                             gold: '#fbbf24',
                         }
@@ -43,15 +45,6 @@
             }
         }
     </script>
-
-    <style>
-        /* Ajustes finos */
-        .glass-nav {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(8px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        }
-    </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden selection:bg-brand-primary selection:text-white">
 
@@ -59,11 +52,17 @@
         <div class="container mx-auto px-6 flex justify-between items-center">
             
             <a href="#" class="flex items-center gap-3 group">
-                <div class="w-12 h-12 text-brand-primary transition-transform transform group-hover:scale-105">
-                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20 30 C 20 10, 45 10, 50 25 C 55 10, 80 10, 80 30 C 80 60, 65 85, 55 90 L 55 75" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M45 90 L 35 85 C 25 75, 20 50, 20 30" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
-                        <path d="M42 35 L 42 75 M 42 35 C 60 35, 60 55, 42 55" stroke="#0f3847" stroke-width="5" stroke-linecap="round"/>
+                <div class="w-12 h-12 transition-transform transform group-hover:scale-105 relative">
+                   <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#008b99;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#0f3847;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <path d="M25 35 C 25 10, 48 15, 50 25 C 52 15, 75 10, 75 35 C 75 65, 65 85, 55 90 M 45 90 C 35 85, 25 65, 25 35" 
+                              stroke="url(#logoGradient)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <text x="50" y="62" font-family="'Playfair Display', serif" font-size="42" font-weight="bold" fill="url(#logoGradient)" text-anchor="middle">P</text>
                     </svg>
                 </div>
                 <div class="flex flex-col">
@@ -73,23 +72,25 @@
             </a>
 
             <div class="hidden md:flex items-center space-x-8">
-                <a href="#servicios" class="text-sm font-medium hover:text-brand-primary transition-colors" data-i18n="services">Servicios</a>
-                <a href="#testimonios" class="text-sm font-medium hover:text-brand-primary transition-colors" data-i18n="testimonials">Testimonios</a>
-                <a href="#ubicacion" class="text-sm font-medium hover:text-brand-primary transition-colors">Ubicación</a>
+                <a href="#servicios" class="text-sm font-medium hover:text-brand-primary transition-colors" data-i18n="nav_services">Servicios</a>
+                <a href="#testimonios" class="text-sm font-medium hover:text-brand-primary transition-colors" data-i18n="nav_testimonials">Testimonios</a>
+                <a href="#ubicacion" class="text-sm font-medium hover:text-brand-primary transition-colors" data-i18n="nav_location">Ubicación</a>
                 
                 <div class="flex items-center gap-3 border-l pl-4 border-slate-200">
                     <a href="https://www.facebook.com/p/Cl%C3%ADnica-Dental-Dra-Cindy-Padilla-61555707488811/" target="_blank" class="text-slate-400 hover:text-blue-600 transition-colors"><i class="fa-brands fa-facebook"></i></a>
                     <a href="https://www.instagram.com/dracindypadilla_/" target="_blank" class="text-slate-400 hover:text-pink-600 transition-colors"><i class="fa-brands fa-instagram"></i></a>
                 </div>
 
-                <button id="lang-toggle" class="relative w-14 h-7 bg-slate-200 rounded-full flex items-center transition-colors duration-300 focus:outline-none">
-                    <div id="lang-circle" class="absolute left-1 w-5 h-5 bg-white rounded-full shadow-md transform transition-transform duration-300"></div>
-                    <span class="absolute left-7 text-[10px] font-bold text-slate-500 pointer-events-none transition-opacity duration-300" id="lang-text-en">EN</span>
-                    <span class="absolute left-2 text-[10px] font-bold text-brand-primary pointer-events-none opacity-0 transition-opacity duration-300" id="lang-text-es">ES</span>
+                <button id="lang-toggle" class="relative w-14 h-7 bg-slate-200 rounded-full flex items-center transition-colors duration-300 focus:outline-none cursor-pointer">
+                    <div id="lang-circle" class="absolute left-1 w-5 h-5 bg-white rounded-full shadow-md transform transition-transform duration-300 z-10"></div>
+                    
+                    <span class="absolute right-2 text-[10px] font-bold text-slate-400 transition-colors duration-300" id="lang-text-en">EN</span>
+                    
+                    <span class="absolute left-2 text-[10px] font-bold text-brand-primary transition-colors duration-300" id="lang-text-es">ES</span>
                 </button>
 
-                <a href="#contacto" class="bg-brand-primary hover:bg-brand-dark text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-brand-primary/30 transition-all hover:-translate-y-0.5 transform">
-                    <i class="fa-brands fa-whatsapp mr-2"></i> <span data-i18n="cta_nav">Agendar Cita</span>
+                <a href="#contacto" class="bg-brand-primary hover:bg-brand-dark text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-brand-primary/30 transition-all hover:-translate-y-0.5 transform flex items-center">
+                    <i class="fa-brands fa-whatsapp mr-2"></i> <span data-i18n="nav_cta">Agendar Cita</span>
                 </a>
             </div>
 
@@ -99,20 +100,20 @@
         </div>
 
         <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-slate-100 flex-col p-6 space-y-4 md:hidden">
-            <a href="#servicios" class="block text-slate-700 font-medium" onclick="toggleMenu()">Servicios</a>
-            <a href="#testimonios" class="block text-slate-700 font-medium" onclick="toggleMenu()">Testimonios</a>
-            <a href="#ubicacion" class="block text-slate-700 font-medium" onclick="toggleMenu()">Ubicación</a>
+            <a href="#servicios" class="block text-slate-700 font-medium" onclick="toggleMenu()" data-i18n="nav_services">Servicios</a>
+            <a href="#testimonios" class="block text-slate-700 font-medium" onclick="toggleMenu()" data-i18n="nav_testimonials">Testimonios</a>
+            <a href="#ubicacion" class="block text-slate-700 font-medium" onclick="toggleMenu()" data-i18n="nav_location">Ubicación</a>
             <div class="flex gap-4 py-2">
                 <a href="https://www.facebook.com/p/Cl%C3%ADnica-Dental-Dra-Cindy-Padilla-61555707488811/" target="_blank" class="text-blue-600 text-xl"><i class="fa-brands fa-facebook"></i></a>
                 <a href="https://www.instagram.com/dracindypadilla_/" target="_blank" class="text-pink-600 text-xl"><i class="fa-brands fa-instagram"></i></a>
             </div>
-            <a href="#contacto" class="block w-full text-center bg-brand-primary text-white py-3 rounded-lg font-bold">Agendar Cita Ahora</a>
+            <a href="#contacto" class="block w-full text-center bg-brand-primary text-white py-3 rounded-lg font-bold" data-i18n="nav_cta">Agendar Cita Ahora</a>
         </div>
     </nav>
 
     <section class="relative h-screen flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1588776813186-600d9164cc15?q=80&w=1920&auto=format&fit=crop" 
+            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1468&auto=format&fit=crop" 
                  alt="Odontología Profesional" 
                  class="w-full h-full object-cover opacity-90">
             <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-transparent md:bg-gradient-to-r md:from-white/90 md:via-white/60 md:to-transparent"></div>
@@ -122,23 +123,23 @@
             <div class="space-y-6 animate-fade-in-up text-center md:text-left">
                 <div class="inline-flex items-center gap-2 bg-brand-light px-4 py-1.5 rounded-full border border-brand-primary/20 mx-auto md:mx-0">
                     <span class="w-2 h-2 rounded-full bg-brand-primary animate-pulse"></span>
-                    <span class="text-xs font-bold tracking-wider uppercase text-brand-dark">Agenda Abierta 2026</span>
+                    <span class="text-xs font-bold tracking-wider uppercase text-brand-dark" data-i18n="hero_badge">Agenda Abierta 2026</span>
                 </div>
                 
                 <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-brand-dark">
-                    Todo gran año nace con una <span class="text-brand-primary italic">buena sonrisa</span>.
+                    <span data-i18n="hero_title_1">¡Tu sonrisa merece</span> <span class="text-brand-primary italic" data-i18n="hero_title_2">atención y cuidados!</span>
                 </h1>
                 
-                <p class="text-lg text-slate-600 max-w-lg font-light leading-relaxed mx-auto md:mx-0">
-                    Cuida tu bienestar con un chequeo dental profesional. Atención integral, dulce y paciente en Jardines de Merliot.
+                <p class="text-lg text-slate-600 max-w-lg font-light leading-relaxed mx-auto md:mx-0" data-i18n="hero_subtitle">
+                    Realiza tus controles, limpiezas y tratamientos con nosotros.
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4 pt-4 justify-center md:justify-start">
                     <a href="#contacto" class="bg-brand-gold hover:bg-yellow-400 text-brand-dark px-8 py-4 rounded-xl font-bold text-center shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2">
-                        <span>Reservar Cita</span>
+                        <span data-i18n="hero_cta_primary">Reservar Cita</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
-                    <a href="#servicios" class="bg-white border border-slate-200 hover:border-brand-primary text-slate-700 hover:text-brand-primary px-8 py-4 rounded-xl font-medium text-center transition-all shadow-sm">
+                    <a href="#servicios" class="bg-white border border-slate-200 hover:border-brand-primary text-slate-700 hover:text-brand-primary px-8 py-4 rounded-xl font-medium text-center transition-all shadow-sm" data-i18n="hero_cta_secondary">
                         Ver Tratamientos
                     </a>
                 </div>
@@ -153,7 +154,7 @@
                         <div class="flex text-brand-gold text-xs">
                             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                         </div>
-                        <p class="font-medium">5.0 en Google Reviews</p>
+                        <p class="font-medium" data-i18n="google_reviews">5.0 en Google Reviews</p>
                     </div>
                 </div>
             </div>
@@ -163,8 +164,8 @@
     <section id="servicios" class="py-24 bg-slate-50">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16 max-w-2xl mx-auto">
-                <span class="text-brand-primary font-bold tracking-wider text-sm uppercase">Nuestros Servicios</span>
-                <h2 class="font-serif text-4xl font-bold text-slate-900 mt-2 mb-4">Cuidado Integral para Ti</h2>
+                <span class="text-brand-primary font-bold tracking-wider text-sm uppercase" data-i18n="services_badge">Nuestros Servicios</span>
+                <h2 class="font-serif text-4xl font-bold text-slate-900 mt-2 mb-4" data-i18n="services_title">Cuidado Integral para Ti</h2>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
@@ -172,8 +173,8 @@
                 <div class="md:col-span-2 relative group overflow-hidden rounded-3xl shadow-lg cursor-pointer">
                     <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1000&q=80" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Limpieza Dental">
                     <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-transparent to-transparent p-8 flex flex-col justify-end">
-                        <h3 class="text-white text-2xl font-bold mb-2">Odontología General</h3>
-                        <p class="text-slate-200 text-sm">Limpiezas, rellenos y diagnósticos preventivos.</p>
+                        <h3 class="text-white text-2xl font-bold mb-2" data-i18n="service_1_title">Odontología General</h3>
+                        <p class="text-slate-200 text-sm" data-i18n="service_1_desc">Limpiezas, rellenos y diagnósticos preventivos.</p>
                     </div>
                 </div>
 
@@ -181,23 +182,23 @@
                     <div class="bg-brand-light w-16 h-16 rounded-full flex items-center justify-center text-brand-primary mb-6 group-hover:bg-brand-primary group-hover:text-white transition-colors">
                         <i class="fa-solid fa-tooth text-3xl"></i>
                     </div>
-                    <h3 class="text-slate-900 text-xl font-bold mb-2">Endodoncia</h3>
-                    <p class="text-slate-600 text-sm">Salvamos tus dientes eliminando el dolor de raíz.</p>
+                    <h3 class="text-slate-900 text-xl font-bold mb-2" data-i18n="service_2_title">Endodoncia</h3>
+                    <p class="text-slate-600 text-sm" data-i18n="service_2_desc">Salvamos tus dientes eliminando el dolor de raíz.</p>
                 </div>
 
                 <div class="relative group overflow-hidden rounded-3xl shadow-sm bg-white border border-slate-100 p-8 flex flex-col justify-center items-center text-center hover:border-brand-primary/30 transition-all">
                     <div class="bg-brand-light w-16 h-16 rounded-full flex items-center justify-center text-brand-primary mb-6 group-hover:bg-brand-primary group-hover:text-white transition-colors">
                         <i class="fa-solid fa-child-reaching text-3xl"></i>
                     </div>
-                    <h3 class="text-slate-900 text-xl font-bold mb-2">Odontopediatría</h3>
-                    <p class="text-slate-600 text-sm">Atención paciente y dulce para los más pequeños.</p>
+                    <h3 class="text-slate-900 text-xl font-bold mb-2" data-i18n="service_3_title">Odontopediatría</h3>
+                    <p class="text-slate-600 text-sm" data-i18n="service_3_desc">Atención paciente y dulce para los más pequeños.</p>
                 </div>
 
                 <div class="md:col-span-2 relative group overflow-hidden rounded-3xl shadow-lg cursor-pointer">
                     <img src="https://images.unsplash.com/photo-1600170311833-c2cf5280ce49?auto=format&fit=crop&w=1000&q=80" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Cirugía Dental">
                     <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-transparent to-transparent p-8 flex flex-col justify-end">
-                        <h3 class="text-white text-2xl font-bold mb-2">Cirugías y Cordales</h3>
-                        <p class="text-slate-200 text-sm">Extracciones seguras con rápida recuperación.</p>
+                        <h3 class="text-white text-2xl font-bold mb-2" data-i18n="service_4_title">Cirugías y Cordales</h3>
+                        <p class="text-slate-200 text-sm" data-i18n="service_4_desc">Extracciones seguras con rápida recuperación.</p>
                     </div>
                 </div>
 
@@ -207,28 +208,28 @@
 
     <section id="testimonios" class="py-24 bg-white">
         <div class="container mx-auto px-6">
-            <h2 class="font-serif text-4xl font-bold text-center text-slate-900 mb-12">Pacientes Felices</h2>
+            <h2 class="font-serif text-4xl font-bold text-center text-slate-900 mb-12" data-i18n="testimonials_title">Pacientes Felices</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 shadow-sm">
                     <div class="flex text-brand-gold text-xs mb-4">
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
                     <p class="text-slate-700 text-sm italic mb-4">"La doctora súper amable y atenta... llegué por una limpieza y todo excelente. 10/10 👌"</p>
-                    <p class="font-bold text-brand-dark text-sm">- Christian Gavidia</p>
+                    <p class="font-bold text-brand-dark text-sm">- Christian G</p>
                 </div>
                 <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 shadow-sm">
                     <div class="flex text-brand-gold text-xs mb-4">
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
                     <p class="text-slate-700 text-sm italic mb-4">"Fui por una cirugía de cordal, me ha cicatrizado súper bien, no sentí ningún dolor. Instalaciones súper cómodas."</p>
-                    <p class="font-bold text-brand-dark text-sm">- Mónica Quezada</p>
+                    <p class="font-bold text-brand-dark text-sm">- Mónica Q</p>
                 </div>
                 <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 shadow-sm">
                     <div class="flex text-brand-gold text-xs mb-4">
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
                     <p class="text-slate-700 text-sm italic mb-4">"La doctora fue muy dulce y paciente con mi niña, se tomó el tiempo para explicarle cada procedimiento."</p>
-                    <p class="font-bold text-brand-dark text-sm">- Ingrid Barquero</p>
+                    <p class="font-bold text-brand-dark text-sm">- Ingrid B</p>
                 </div>
             </div>
         </div>
@@ -237,25 +238,25 @@
     <section id="ubicacion" class="py-24 bg-brand-light/20">
         <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
             <div>
-                <span class="text-brand-primary font-bold tracking-wider text-sm uppercase">Ubicación</span>
-                <h2 class="font-serif text-3xl font-bold text-slate-900 mt-2 mb-6">Visítanos en Santa Tecla</h2>
-                <p class="text-slate-600 mb-6">Estamos ubicados estratégicamente para tu comodidad. Contamos con parqueo y accesibilidad.</p>
+                <span class="text-brand-primary font-bold tracking-wider text-sm uppercase" data-i18n="location_badge">Ubicación</span>
+                <h2 class="font-serif text-3xl font-bold text-slate-900 mt-2 mb-6" data-i18n="location_title">Visítanos en Santa Tecla</h2>
+                <p class="text-slate-600 mb-6" data-i18n="location_desc">Estamos ubicados estratégicamente para tu comodidad. Contamos con parqueo y accesibilidad.</p>
                 
                 <div class="space-y-4">
                     <div class="flex items-start gap-4">
                         <i class="fa-solid fa-location-dot text-brand-primary mt-1"></i>
-                        <p class="text-slate-700 text-sm">Polígono M #2, Urbanización Jardines de Merliot, Santa Tecla.<br><span class="text-xs text-slate-400">MPHH+9Q Cd Merliot</span></p>
+                        <p class="text-slate-700 text-sm">Polígono M #2, Urbanización Jardines de Merliot.<br><span class="text-xs text-slate-400">Santa Tecla</span></p>
                     </div>
                     <div class="flex items-start gap-4">
                         <i class="fa-solid fa-clock text-brand-primary mt-1"></i>
-                        <p class="text-slate-700 text-sm">Lunes a Viernes: 9:00 AM - 6:00 PM<br>Sábados: Con cita previa</p>
+                        <p class="text-slate-700 text-sm"><span data-i18n="schedule_days">Lunes a Viernes:</span> 9:00 AM - 6:00 PM<br><span data-i18n="schedule_sat">Sábados: Con cita previa</span></p>
                     </div>
                 </div>
             </div>
 
             <div class="h-80 rounded-2xl overflow-hidden shadow-lg border border-white">
                 <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.3664790089855!2d-89.2743586!3d13.6732387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6331ce4a827725%3A0x6d649d03192070e1!2sPoligono%20M%2C%20C.%20Ayagualo%202%2C%20Santa%20Tecla!5e0!3m2!1ses!2ssv!4v1706222222222!5m2!1ses!2ssv" 
+                    src="https://maps.google.com/maps?q=13.678483190795836,-89.27053609325273&hl=es;z=16&output=embed" 
                     width="100%" 
                     height="100%" 
                     style="border:0;" 
@@ -269,28 +270,36 @@
     <section id="contacto" class="py-24 bg-brand-dark relative overflow-hidden">
         <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
         <div class="container mx-auto px-6 relative z-10 max-w-4xl text-center">
-            <h2 class="font-serif text-3xl md:text-5xl font-bold text-white mb-6">Tu nueva sonrisa comienza aquí</h2>
-            <p class="text-slate-300 mb-10 text-lg">Agenda tu cita vía WhatsApp. Es rápido y hablamos directamente.</p>
+            <h2 class="font-serif text-3xl md:text-5xl font-bold text-white mb-6" data-i18n="contact_title">Tu nueva sonrisa comienza aquí</h2>
+            <p class="text-slate-300 mb-10 text-lg" data-i18n="contact_subtitle">Agenda tu cita vía WhatsApp. Es rápido y hablamos directamente.</p>
             
             <form id="whatsappForm" class="bg-white p-8 rounded-3xl shadow-2xl max-w-lg mx-auto text-left" onsubmit="sendToWhatsapp(event)">
                 <div class="space-y-4">
                     <div>
-                        <label class="text-xs font-bold text-slate-500 uppercase">Tu Nombre</label>
+                        <label class="text-xs font-bold text-slate-500 uppercase" data-i18n="form_name">Tu Nombre</label>
                         <input type="text" id="name" required class="w-full mt-1 border-b-2 border-slate-200 focus:border-brand-primary outline-none py-2 transition-colors bg-transparent" placeholder="Ej: Juan Pérez">
                     </div>
-                    <div>
-                        <label class="text-xs font-bold text-slate-500 uppercase">Motivo de consulta</label>
-                        <select id="service" class="w-full mt-1 border-b-2 border-slate-200 focus:border-brand-primary outline-none py-2 bg-transparent">
-                            <option value="Evaluación General">Evaluación General</option>
-                            <option value="Limpieza Dental">Limpieza Dental</option>
-                            <option value="Dolor / Emergencia">Dolor / Emergencia</option>
-                            <option value="Niños">Odontopediatría</option>
-                            <option value="Ortodoncia/Estética">Estética</option>
-                        </select>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                             <label class="text-xs font-bold text-slate-500 uppercase" data-i18n="form_motive">Motivo</label>
+                            <select id="service" class="w-full mt-1 border-b-2 border-slate-200 focus:border-brand-primary outline-none py-2 bg-transparent">
+                                <option value="Evaluación General">Evaluación</option>
+                                <option value="Limpieza Dental">Limpieza</option>
+                                <option value="Dolor / Emergencia">Emergencia</option>
+                                <option value="Niños">Niños</option>
+                                <option value="Ortodoncia/Estética">Estética</option>
+                            </select>
+                        </div>
+                        <div>
+                             <label class="text-xs font-bold text-slate-500 uppercase" data-i18n="form_date">Fecha Deseada</label>
+                            <input type="date" id="date" class="w-full mt-1 border-b-2 border-slate-200 focus:border-brand-primary outline-none py-2 bg-transparent text-slate-600">
+                        </div>
                     </div>
+
                     <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 rounded-xl shadow-lg mt-6 flex items-center justify-center gap-2 transition-transform hover:scale-[1.02]">
                         <i class="fa-brands fa-whatsapp text-xl"></i>
-                        Enviar Mensaje
+                        <span data-i18n="form_btn">Enviar Mensaje</span>
                     </button>
                 </div>
             </form>
@@ -300,62 +309,151 @@
     <footer class="bg-slate-900 text-white py-12 border-t border-slate-800">
         <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
             <div>
-                <span class="font-serif font-bold text-xl">DRA. CINDY PADILLA</span>
+                <span class="font-serif font-bold text-2xl tracking-wide">DRA. CINDY PADILLA</span>
                 <p class="text-slate-500 text-sm mt-1">Odontología Integral en El Salvador.</p>
             </div>
             
             <div class="flex gap-6">
-                <a href="https://www.facebook.com/p/Cl%C3%ADnica-Dental-Dra-Cindy-Padilla-61555707488811/" target="_blank" class="text-slate-400 hover:text-white transition-colors text-2xl"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.instagram.com/dracindypadilla_/" target="_blank" class="text-slate-400 hover:text-white transition-colors text-2xl"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/p/Cl%C3%ADnica-Dental-Dra-Cindy-Padilla-61555707488811/" target="_blank" class="text-slate-400 hover:text-white transition-colors text-2xl" aria-label="Facebook Doctora"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/dracindypadilla_/" target="_blank" class="text-slate-400 hover:text-white transition-colors text-2xl" aria-label="Instagram Doctora"><i class="fa-brands fa-instagram"></i></a>
             </div>
         </div>
         
-        <div class="container mx-auto px-6 border-t border-slate-800 mt-12 pt-8 text-center text-xs text-gray-600">
-            <p>&copy; 2026 Dra. Cindy Padilla. Todos los derechos reservados.</p>
-            <div class="mt-2 flex justify-center items-center gap-2">
-                <span>Powered by <span class="text-blue-500 font-bold">Soluciones GAMMA</span></span>
+        <div class="container mx-auto px-6 border-t border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600">
+            <p>© 2026 Dra. Cindy Padilla. Todos los derechos reservados.</p>
+            
+            <div class="mt-2 md:mt-0 flex flex-wrap justify-center items-center gap-4">
+                <span>Powered by <span class="text-brand-primary font-bold">Soluciones GAMMA</span></span>
+                <span class="hidden md:inline text-slate-700">|</span>
+                <a href="https://instagram.com/omegasolutions.sv" target="_blank" class="hover:text-white transition-colors">Instagram</a>
+                <a href="https://facebook.com/omegasolutions.sv" target="_blank" class="hover:text-white transition-colors">Facebook</a>
+                <a href="mailto:info@omegasolutions.sv" class="hover:text-white transition-colors">Email</a>
             </div>
         </div>
     </footer>
 
     <script>
-        // Fix: Toggle Logic Visual + Text
+        const i18n = {
+            es: {
+                nav_services: "Servicios",
+                nav_testimonials: "Testimonios",
+                nav_location: "Ubicación",
+                nav_cta: "Agendar Cita",
+                hero_badge: "Agenda Abierta 2026",
+                hero_title_1: "¡Tu sonrisa merece",
+                hero_title_2: "atención y cuidados!",
+                hero_subtitle: "Realiza tus controles, limpiezas y tratamientos con nosotros.",
+                hero_cta_primary: "Reservar Cita",
+                hero_cta_secondary: "Ver Tratamientos",
+                google_reviews: "5.0 en Google Reviews",
+                services_badge: "Nuestros Servicios",
+                services_title: "Cuidado Integral para Ti",
+                service_1_title: "Odontología General",
+                service_1_desc: "Limpiezas, rellenos y diagnósticos preventivos.",
+                service_2_title: "Endodoncia",
+                service_2_desc: "Salvamos tus dientes eliminando el dolor de raíz.",
+                service_3_title: "Odontopediatría",
+                service_3_desc: "Atención paciente y dulce para los más pequeños.",
+                service_4_title: "Cirugías y Cordales",
+                service_4_desc: "Extracciones seguras con rápida recuperación.",
+                testimonials_title: "Pacientes Felices",
+                location_badge: "Ubicación",
+                location_title: "Visítanos en Santa Tecla",
+                location_desc: "Estamos ubicados estratégicamente para tu comodidad. Contamos con parqueo y accesibilidad.",
+                schedule_days: "Lunes a Viernes:",
+                schedule_sat: "Sábados: Con cita previa",
+                contact_title: "Tu nueva sonrisa comienza aquí",
+                contact_subtitle: "Agenda tu cita vía WhatsApp. Es rápido y hablamos directamente.",
+                form_name: "Tu Nombre",
+                form_motive: "Motivo",
+                form_date: "Fecha Deseada",
+                form_btn: "Enviar Mensaje"
+            },
+            en: {
+                nav_services: "Services",
+                nav_testimonials: "Testimonials",
+                nav_location: "Location",
+                nav_cta: "Book Appt",
+                hero_badge: "2026 Schedule Open",
+                hero_title_1: "Your smile deserves",
+                hero_title_2: "attention and care!",
+                hero_subtitle: "Get your check-ups, cleanings, and treatments with us.",
+                hero_cta_primary: "Book Appointment",
+                hero_cta_secondary: "View Treatments",
+                google_reviews: "5.0 on Google Reviews",
+                services_badge: "Our Services",
+                services_title: "Comprehensive Care",
+                service_1_title: "General Dentistry",
+                service_1_desc: "Cleanings, fillings, and preventive diagnostics.",
+                service_2_title: "Endodontics",
+                service_2_desc: "Saving your teeth by eliminating root pain.",
+                service_3_title: "Pediatric Dentistry",
+                service_3_desc: "Patient and sweet care for the little ones.",
+                service_4_title: "Surgery & Wisdom Teeth",
+                service_4_desc: "Safe extractions with fast recovery.",
+                testimonials_title: "Happy Patients",
+                location_badge: "Location",
+                location_title: "Visit us in Santa Tecla",
+                location_desc: "Strategically located for your comfort. Parking available.",
+                schedule_days: "Monday - Friday:",
+                schedule_sat: "Saturdays: By appointment",
+                contact_title: "Your new smile starts here",
+                contact_subtitle: "Book via WhatsApp. Fast and direct communication.",
+                form_name: "Your Name",
+                form_motive: "Reason",
+                form_date: "Preferred Date",
+                form_btn: "Send Message"
+            }
+        };
+
         const langBtn = document.getElementById('lang-toggle');
         const langCircle = document.getElementById('lang-circle');
         const textEn = document.getElementById('lang-text-en');
         const textEs = document.getElementById('lang-text-es');
-        let isEnglish = false;
+        let currentLang = 'es'; 
 
         langBtn.addEventListener('click', () => {
-            isEnglish = !isEnglish;
+            currentLang = currentLang === 'es' ? 'en' : 'es';
             
-            if(isEnglish) {
-                // Mover bola a la derecha
+            if(currentLang === 'en') {
                 langCircle.classList.add('translate-x-6');
-                // Mostrar ES, Ocultar EN (porque ahora estamos en modo inglés, el botón debería mostrar lo activo o la opción? 
-                // Usualmente el toggle muestra el estado actual. Si está a la derecha es EN.
-                textEn.classList.add('opacity-0');
-                textEs.classList.remove('opacity-0');
-                // Aquí iría la lógica de traducción real
+                textEn.classList.add('text-brand-primary');
+                textEn.classList.remove('text-slate-400');
+                textEs.classList.remove('text-brand-primary');
+                textEs.classList.add('text-slate-400');
             } else {
-                // Volver a la izquierda
                 langCircle.classList.remove('translate-x-6');
-                textEn.classList.remove('opacity-0');
-                textEs.classList.add('opacity-0');
+                textEn.classList.remove('text-brand-primary');
+                textEn.classList.add('text-slate-400');
+                textEs.classList.add('text-brand-primary');
+                textEs.classList.remove('text-slate-400');
             }
+
+            updateContent(currentLang);
         });
 
-        // WhatsApp Logic
+        function updateContent(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if(i18n[lang][key]) {
+                    el.innerText = i18n[lang][key];
+                }
+            });
+        }
+
         function sendToWhatsapp(e) {
             e.preventDefault();
             const name = document.getElementById('name').value;
             const service = document.getElementById('service').value;
+            const date = document.getElementById('date').value;
             const phone = "50375239863"; 
-            const message = `Hola Dra. Padilla, soy *${name}*. Quisiera agendar una cita para *${service}*.`;
-            window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
+            
+            let dateText = date ? ` para la fecha *${date}*` : " lo antes posible";
+            const message = `Hola Dra. Padilla, soy *${name}*. Quisiera agendar una cita de *${service}*${dateText}.`;
+            
+            window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
         }
 
-        // Mobile Menu
         function toggleMenu() {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
